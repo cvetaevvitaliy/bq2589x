@@ -40,6 +40,7 @@ int16_t bq2589x_read_byte(uint8_t *data, uint8_t reg)
 }
 
 
+
 /**
   * @brief  Write generic device register
   *
@@ -56,34 +57,6 @@ int16_t bq2589x_write_byte(uint8_t reg, uint8_t *data)
     return ret;
 }
 
-
-//static uint16_t bq2589x_read_byte(uint8_t *data, uint8_t reg)
-//{
-//
-//  if(HAL_I2C_Mem_Read(&hi2c1,BQ25895_ADDR,reg,1,data,1,25)==HAL_OK)
-//  {
-//    return BQ25895_OK;//TI lib uses 1 as failed
-//  }
-//  else
-//  {
-//    return BQ25895_ERR;//TI lib uses 1 as failed
-//  }
-//
-//}
-//
-//
-//static uint16_t bq2589x_write_byte(uint8_t reg, uint8_t data)
-//{
-//
-//  if(HAL_I2C_Mem_Write(&hi2c1,BQ25895_ADDR,reg,1,&data,1,25)==HAL_OK)
-//  {
-//    return BQ25895_OK;//TI lib uses 1 as failed
-//  }
-//  else
-//  {
-//    return BQ25895_ERR;//TI lib uses 1 as failed
-//  }
-//}
 
 
 static uint16_t bq2589x_update_bits(uint8_t reg, uint8_t mask, uint8_t data)
